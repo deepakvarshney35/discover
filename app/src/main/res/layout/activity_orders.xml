@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/ordersListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@color/holoLightBackground"
+        android:headerDividersEnabled="true"
+        android:divider="@null"
+        android:dividerHeight="5dp"
+        tools:listitem="@layout/listview_order_item"/>
+
+    <LinearLayout
+        android:id="@+id/nothingFoundLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_action_cart_empty"/>
+
+        <TextView
+            android:id="@+id/productCostTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
+            android:text="You have no orders."
+            android:textColor="@color/darkGrey"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:indeterminate="true" />
+
+    <LinearLayout
+        android:id="@+id/noInternetLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/shop_search"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
+            android:text="Please connect to the internet and then \n tap here to try again"
+            android:textColor="@color/lightGrey"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:title="Sort By"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_action_sort_by_size">
+        <menu>
+            <item android:id="@+id/action_price_low_to_high"
+                android:title="Price: Low to High"/>
+            <item android:id="@+id/action_price_high_to_low"
+                android:title="Price: High to Low"/>
+            <item android:id="@+id/action_newest_arrivals"
+                android:title="Newest Arrivals"/>
+        </menu>
+    </item>
+</menu>

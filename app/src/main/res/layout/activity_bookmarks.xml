@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.enormous.pkpizzas.consumer.common.SlidingTabStrip
+        android:id="@+id/slidingTabStrip"
+        android:layout_width="match_parent"
+        android:fillViewport="false"
+        android:background="@color/white"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ab_drop_shadow_height"
+            android:background="@drawable/ab_drop_shadow"/>
+
+    </FrameLayout>
+
+</LinearLayout>

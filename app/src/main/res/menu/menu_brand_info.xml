@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <item android:id="@+id/ic_action_call"
+        android:showAsAction="always"
+        android:title="Phone"
+        android:icon="@drawable/ic_action_call"
+        />
+    <item android:id="@+id/ic_action_email"
+        android:showAsAction="always"
+        android:title="Email"
+        android:icon="@drawable/ic_action_email"/>
+    
+    <!--<item android:id="@+id/ic_action_chat"
+        android:showAsAction="always"
+        android:title="CHAT"
+    />-->
+    <item android:id="@+id/ic_action_profile"
+        android:showAsAction="always"
+        android:title="Profile"
+        android:icon="@drawable/ic_settings_white_18dp"/>
+
+</menu>

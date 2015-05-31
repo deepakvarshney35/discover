@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/ic_action_clear_cache"
+        android:showAsAction="never"
+        android:title="Clear Cache"/>
+    <item
+        android:id="@+id/ic_action_logout"
+        android:showAsAction="never"
+        android:title="Log Out"/>
+    <item
+        android:id="@+id/ic_action_deactivate_account"
+        android:showAsAction="never"
+        android:title="Deactivate Account"/>
+
+</menu>

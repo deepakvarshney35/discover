@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/holoLightBackground"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:background="@color/indigo500"
+        android:paddingTop="10dp" >
+
+        <FrameLayout
+            android:id="@+id/userPictureImageViewContainer"
+            android:layout_width="@dimen/profilepic_thumbnail_width"
+            android:layout_height="@dimen/profilepic_thumbnail_height"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:background="@color/white"
+            android:foreground="@drawable/gridview_selector" >
+
+            <ImageView
+                android:id="@+id/userPictureImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/apparels" />
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/overflowButton"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/userPictureImageViewContainer"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/emailTextView"
+            android:background="?android:attr/actionBarItemBackground"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_action_overflow" />
+
+        <TextView
+            android:id="@+id/emailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/userPictureImageViewContainer"
+            android:fontFamily="sans-serif-regular"
+            android:textStyle="normal"
+            android:gravity="center|left"
+            android:text="Manas Bajaj"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="15dp"
+            android:background="@android:color/transparent"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/preferencesRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_background"
+                    android:layout_margin="10dp"
+                    android:padding="10dp" >
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_action_navigation_next_item"
+                        android:layout_alignParentTop="true"
+                        android:visibility="visible"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true" />
+
+                    <TextView
+                        android:id="@+id/preferencesTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Edit notification preferences"
+                        android:fontFamily="sans-serif-regular"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/inviteFriendsRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_background"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:padding="10dp" >
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_action_navigation_next_item"
+                        android:layout_alignParentTop="true"
+                        android:visibility="visible"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Invite friends"
+                        android:fontFamily="sans-serif-regular"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginRight="@dimen/default_margin"
+                    android:background="@drawable/card_background"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/productCostTextView"
+                        android:layout_width="match_parent"
+                        android:background="@color/fb_cardTitleBackground"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:padding="10dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginTop="1dp"
+                        android:textStyle="bold"
+                        android:text="PROFILE"
+                        android:textColor="@color/fb_cardTitleText"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/fb_dividerColor" />
+
+                    <RelativeLayout
+                        android:id="@+id/fullNameRelativeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/actionBarItemBackground"
+                        android:clickable="true"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="10dp" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="Name"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/fullNameTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:gravity="left"
+                            android:text="Manas Bajaj"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="14sp"
+                            android:layout_below="@+id/textView2"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@+id/imageView3" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_action_edit"
+                            android:scaleType="centerInside"
+                            android:layout_marginLeft="10dp"
+                            android:padding="5dp"
+                            android:background="@drawable/rectangle_rounded_corners"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:id="@+id/imageView3" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/fb_dividerColor" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="10dp" >
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="Email"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/emailTextView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="manas.bajaj94@gmail.com"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="14sp"
+                            android:layout_below="@+id/textView3"
+                            android:layout_alignStart="@+id/textView3"
+                            android:layout_toStartOf="@+id/imageView4"
+                            android:gravity="left" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_action_edit"
+                            android:scaleType="centerInside"
+                            android:layout_marginLeft="10dp"
+                            android:padding="5dp"
+                            android:visibility="gone"
+                            android:background="@drawable/rectangle_rounded_corners"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:id="@+id/imageView4" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/fb_dividerColor" />
+
+                    <RelativeLayout
+                        android:id="@+id/phoneRelativeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/actionBarItemBackground"
+                        android:clickable="true"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="Phone"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:id="@+id/textView" />
+
+                        <TextView
+                            android:id="@+id/phoneTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+91 9711512121"
+                            android:background="@android:color/transparent"
+                            android:layout_below="@+id/textView"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="14sp"
+                            android:layout_toStartOf="@+id/productBrandCategoryImageView"
+                            android:layout_alignStart="@+id/textView"
+                            android:gravity="left" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:id="@+id/productBrandCategoryImageView"
+                            android:src="@drawable/ic_action_edit"
+                            android:scaleType="centerInside"
+                            android:layout_marginLeft="10dp"
+                            android:padding="5dp"
+                            android:background="@drawable/rectangle_rounded_corners"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/fb_dividerColor" />
+
+                    <RelativeLayout
+                        android:id="@+id/resetPasswordRelativeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/actionBarItemBackground"
+                        android:clickable="true"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="10dp" >
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="Password"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/emailTextView9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="************"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="14sp"
+                            android:layout_below="@+id/textView6"
+                            android:layout_alignStart="@+id/textView6"
+                            android:layout_toStartOf="@+id/imageView5"
+                            android:gravity="left" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_action_edit"
+                            android:scaleType="centerInside"
+                            android:padding="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/rectangle_rounded_corners"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:id="@+id/imageView5" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginRight="@dimen/default_margin"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:background="@drawable/card_background"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:padding="10dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="1dp"
+                        android:background="@color/fb_cardTitleBackground"
+                        android:text="ABOUT"
+                        android:textStyle="bold"
+                        android:textColor="@color/fb_cardTitleText"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/lightGrey" />
+
+                    <RelativeLayout
+                        android:id="@+id/aboutRelativeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/actionBarItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="10dp" >
+
+                        <TextView
+                            android:id="@+id/aboutTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:text="Add a few words about yourself"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="14sp"
+                            android:gravity="center_vertical"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@+id/imageView100"
+                            android:layout_alignBottom="@+id/imageView100"
+                            android:layout_alignTop="@id/imageView100"/>
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_action_edit"
+                            android:scaleType="centerInside"
+                            android:padding="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/rectangle_rounded_corners"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:id="@+id/imageView100" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ab_drop_shadow_height"
+            android:background="@drawable/ab_drop_shadow"/>
+
+        </FrameLayout>
+
+
+
+</LinearLayout>

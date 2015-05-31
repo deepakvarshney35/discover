@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/holoLightBackground"
+    android:orientation="vertical" >
+
+    <com.enormous.pkpizzas.consumer.common.SlidingTabStrip
+        android:id="@+id/slidingTabStrip"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ab_drop_shadow_height"
+        android:background="@drawable/ab_drop_shadow"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:background="@drawable/card_background_only_shadow" >
+
+        <ImageButton
+            android:id="@+id/searchImageButton"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/searchEditText"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/searchEditText"
+            android:layout_marginRight="10dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_action_search_edittext" />
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/searchImageButton"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:hint="Search"
+            android:imeOptions="actionSearch"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textSize="14sp" >
+            <requestFocus/>
+        </EditText>
+    </RelativeLayout>
+
+
+    <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

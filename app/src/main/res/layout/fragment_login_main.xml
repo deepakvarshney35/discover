@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/default_padding"
+    android:background="@color/holoLightBackground" >
+
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/app_name"
+        android:gravity="center"
+        android:textColor="@color/darkGrey"
+        android:textSize="80sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/linearLayout"
+        android:layout_alignEnd="@+id/linearLayout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical"
+        android:layout_above="@+id/signInNowTextView"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/signInWithGooglePlusButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/button_selector_google_plus"
+                android:text="Google Plus" />
+
+            <Button
+                android:id="@+id/signInWithFacebookButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/button_selector_facebook"
+                android:text="Twitter" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:weightSum="10"
+            android:gravity="center">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.2dp"
+                android:background="@color/holoLightSecondaryText"
+                android:layout_weight="4.5"/>
+            <TextView
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textColor="@color/holoLightSecondaryText"
+                android:layout_weight="1"
+                android:text="OR"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.2dp"
+                android:background="@color/holoLightSecondaryText"
+                android:layout_weight="4.5" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/signUpWithEmailButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_selector_main"
+            android:text="Sign up with Email"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/signInNowTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        android:text="Alread have an account? Sign in now"
+        android:textColor="@drawable/textview_selector"
+        android:textSize="16sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

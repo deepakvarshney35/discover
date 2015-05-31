@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="Profile Information"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimary"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/fb_dividerColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:weightSum="2" >
+
+            <EditText
+                android:id="@+id/firstNameEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:capitalize="words"
+                android:singleLine="true"
+                android:padding="10dp"
+                android:imeOptions="actionNext"
+                android:background="@drawable/edittext_selector"
+                android:hint="First name"/>
+
+            <EditText
+                android:id="@+id/lastNameEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:capitalize="words"
+                android:singleLine="true"
+                android:background="@drawable/edittext_selector"
+                android:textSize="14sp"
+                android:imeOptions="actionNext"
+                android:padding="10dp"
+                android:hint="Last name"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/phoneCodeEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_selector"
+                android:ems="3"
+                android:enabled="false"
+                android:inputType="numberSigned"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:text="+91"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/phoneEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/edittext_selector"
+                android:ems="10"
+                android:hint="Enter your phone number"
+                android:inputType="phone"
+                android:imeOptions="actionDone"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:padding="10dp"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/fb_dividerColor"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/signInButton" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:showDividers="middle"
+            android:divider="?android:attr/dividerVertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/textPrimary"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="Cancel" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/textPrimary"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="Save" />
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/progressLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/blackTranslucent50Percent">
+
+        <ProgressBar
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Saving changes..."/>
+
+    </LinearLayout>
+
+</FrameLayout>

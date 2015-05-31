@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/holoLightBackground"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/brandCoverImageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder_image" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@drawable/actionbar_background_gradient" />
+
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/coverpicture_background_gradient"
+            android:paddingBottom="@dimen/default_padding"
+            android:paddingLeft="10dp"
+            android:paddingRight="@dimen/default_padding"
+            android:paddingTop="@dimen/default_padding" >
+
+            <ImageView
+                android:id="@+id/brandLogoImageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/apparels" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:gravity="bottom"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/productNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medium Text"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/brandPhoneTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textColor="@color/lightGrey"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:background="@drawable/card_background"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp"
+            android:padding="10dp"
+            android:text="ABOUT"
+            android:textStyle="bold"
+            android:background="@color/fb_cardTitleBackground"
+            android:textColor="@color/fb_cardTitleText"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/fb_dividerColor" />
+
+        <TextView
+            android:id="@+id/brandAboutTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="13dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="13dp"
+            android:text="Add a few words about yourself"
+            android:textColor="@color/textPrimary" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/itemsListViewTitleLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:visibility="gone"
+        android:background="@drawable/card_background_rounded_top"
+        android:layout_marginRight="@dimen/default_margin" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="15dp"
+            android:text="ITEMS"
+            android:textStyle="bold"
+            android:textColor="@color/fb_cardTitleText"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:background="@color/fb_dividerColor" />
+    </FrameLayout>
+
+</LinearLayout>

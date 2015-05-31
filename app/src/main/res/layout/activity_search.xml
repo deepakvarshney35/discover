@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/holoLightBackground"
+    android:orientation="vertical" >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:background="@drawable/card_background_only_shadow" >
+
+        <ImageButton
+            android:id="@+id/searchImageButton"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/searchEditText"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/searchEditText"
+            android:layout_marginRight="10dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_action_search_edittext" />
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/searchImageButton"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:hint="Search"
+            android:imeOptions="actionSearch"
+            android:padding="@dimen/default_padding"
+            android:singleLine="true"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/searchListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:scrollbars="none"
+            android:divider="?android:attr/dividerHorizontal"
+            android:dividerHeight="0.3dp"
+            android:background="@color/holoLightBackground"
+            android:clipToPadding="false"
+            android:visibility="gone"
+            tools:listitem="@layout/listview_search_item">
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/progressLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nothingFoundLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/shop_search"/>
+
+            <TextView
+                android:id="@+id/productCostTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingTop="20dp"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:text="There doesn&apos;t seem to be anything here..."
+                android:textColor="@color/darkGrey"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/noInternetLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/shop_search"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:text="Please connect to the internet and then \n tap here to try again"
+                android:textColor="@color/darkGrey"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/searchLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:src="@drawable/background_search"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingTop="00dp"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:text="Search for brands in your history \n using their name or location"
+                android:textColor="@color/darkGrey"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

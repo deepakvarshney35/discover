@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="Sign up"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimary"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/fb_dividerColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:weightSum="2" >
+
+            <EditText
+                android:id="@+id/firstNameEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:capitalize="words"
+                android:singleLine="true"
+                android:padding="10dp"
+                android:imeOptions="actionNext"
+                android:background="@drawable/edittext_selector"
+                android:hint="First name"/>
+
+            <EditText
+                android:id="@+id/lastNameEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:capitalize="words"
+                android:singleLine="true"
+                android:background="@drawable/edittext_selector"
+                android:textSize="14sp"
+                android:imeOptions="actionNext"
+                android:padding="10dp"
+                android:hint="Last name"/>
+
+       </LinearLayout>
+
+
+        <AutoCompleteTextView
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_selector"
+            android:hint="Email"
+            android:singleLine="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:padding="10dp"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress">
+        </AutoCompleteTextView>
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:singleLine="true"
+            android:layout_marginTop="10dp"
+            android:imeOptions="actionNext"
+            android:background="@drawable/edittext_selector"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@id/phoneEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:background="@drawable/edittext_selector"
+            android:textSize="14sp"
+            android:imeOptions="actionDone"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:padding="10dp"
+            android:hint="Phone number"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/fb_dividerColor"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/signInButton" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_margin="15dp"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:id="@+id/signUpButton"
+                android:layout_width="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector_main"
+                android:text="Sign up"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_gravity="right"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Terms of service and \n privacy policy"
+                android:textColor="@color/fb_secondayTextColorLight"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_alignBottom="@+id/signInButton"
+                android:layout_alignTop="@+id/signInButton" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

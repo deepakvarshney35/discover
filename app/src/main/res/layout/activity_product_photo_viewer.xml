@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"/>
+
+    <TextView
+        android:id="@+id/imagePositionIndicatorTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:padding="10dp"
+        android:background="@color/blackTranslucent50Percent"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:text="2 of 5"/>
+
+</FrameLayout>

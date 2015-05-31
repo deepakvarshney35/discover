@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/holoLightBackground"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/categoriesListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/holoLightBackground"
+        android:divider="@null"
+        android:clipToPadding="false"
+        android:paddingBottom="15dp"
+        android:dividerHeight="0dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:scrollbars="none"
+        tools:listitem="@layout/listview_categories_item"
+        tools:listheader="@layout/listview_categories_header">
+    </ListView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ab_drop_shadow_height"
+        android:background="@drawable/ab_drop_shadow"/>
+
+</FrameLayout>

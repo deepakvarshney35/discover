@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:padding="@dimen/default_padding" >
+
+    <ImageView
+        android:id="@+id/thumbnailImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/default_profilepic" />
+
+    <Button
+        android:id="@+id/inviteButton"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:background="@drawable/button_selector_white_grey"
+        android:text="Invite"
+        android:layout_marginLeft="5dp"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/thumbnailImageView"
+        android:layout_alignTop="@+id/thumbnailImageView"
+        android:layout_marginLeft="16dp"
+        android:layout_toLeftOf="@+id/inviteButton"
+        android:layout_toRightOf="@+id/thumbnailImageView"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/infoTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="@color/darkGrey"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

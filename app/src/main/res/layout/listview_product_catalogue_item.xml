@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_background"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/productImageViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="1dp"
+        android:clickable="true"
+        android:foreground="@drawable/gridview_selector" >
+
+        <ImageView
+            android:id="@+id/productImageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder_image" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/lightGrey" >
+    </View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingRight="10dp"
+            android:clickable="false"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/productNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Giant Tic Tac Toe"
+                android:textStyle="bold"
+                android:textColor="@color/textPrimary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/productBrandTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹50 • Zara, Ambience Mall"
+                android:textColor="@color/textPrimary"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/product_cost_textview_background"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/productCostTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="₹50"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/lightGrey" >
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/veryVeryLightGrey"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:divider="?android:attr/dividerVertical"
+        android:showDividers="middle"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:id="@+id/bookmarkLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_action_bookmark"
+                android:id="@+id/bookmarkImageView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#5E5E5E"
+                android:text="Bookmark"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/addToCartLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_action_cart" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:gravity="center"
+                android:text="Add to Cart"
+                android:textStyle="bold"
+                android:textColor="@color/cardButtonTextColor"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/moreInformationLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_action_more_info" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#5E5E5E"
+                android:text="More Info"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+

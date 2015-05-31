@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:id="@+id/FrameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/holoLightBackground">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <com.enormous.pkpizzas.consumer.models.ObservableScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/holoLightBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/listViewBrands"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        android:divider="@null"
+                        android:dividerHeight="8dp"
+                        android:isScrollContainer="false"
+                        android:overScrollMode="never"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingTop="4dp"
+                        android:scrollbars="none"
+                        android:visibility="visible"
+                        tools:listitem="@layout/listview_brands_item_2"></ListView>
+
+                    <TextView
+                        android:id="@+id/headerTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/card_background_rounded_top"
+                        android:padding="10dp"
+                        android:text="NEARBY SHOPS"
+                        android:textColor="@color/fb_cardTitleText"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ListView
+                        android:id="@+id/listViewLocalBrands"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/holoLightBackground"
+                        android:clipToPadding="false"
+                        android:divider="?android:attr/dividerHorizontal"
+                        android:dividerHeight="0.3dp"
+                        android:isScrollContainer="false"
+                        android:overScrollMode="never"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:scrollbars="none"
+                        tools:listitem="@layout/listview_search_item">
+
+                    </ListView>
+
+                    <ProgressBar
+                        android:id="@+id/progressBarLocalBrands"
+                        style="?android:attr/progressBarStyleLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:paddingTop="20dp" />
+                </LinearLayout>
+            </com.enormous.pkpizzas.consumer.models.ObservableScrollView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/noInternetLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/holoLightBackground"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/shop_search" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:paddingTop="20dp"
+                android:text="Please connect to the internet and then \n tap here to try again"
+                android:textColor="@color/lightGrey"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/noBluetoothLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/holoLightBackground"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/shop_search" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:text="Bluetooth seems to be disabled \n Tap here to enable it"
+                android:textColor="@color/holoLightSecondaryText"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nothingFoundLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:paddingTop="20dp"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ab_drop_shadow_height"
+            android:background="@drawable/ab_drop_shadow" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/btToast"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/toast_background"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Bluetooth is switched off"
+            android:textColor="#CCCCCC"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="36dp"
+                    android:layout_centerVertical="true"
+                    android:background="#AAFFFFFF" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/enableBT"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"
+                android:text="Enable"
+                android:textColor="#CCCCCC"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/progressLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:visibility="gone">
+        <!--<ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar2" />-->
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="deepSkyBlue">#00BFFF</color>
+    <color name="everNote">#0095dd</color>
+    <color name="actionBarTranslucent">#4D000000</color>
+    <color name="actionBarDark">#2C3037</color>
+    <color name="darkGrey">#808084</color>
+    <color name="veryDarkGrey">#404042</color>
+    <color name="veryLightGrey">#efefef</color>
+    <color name="lighterGrey">#dbdbdb</color>
+    <color name="buttonSelectorGrey">#f1f1f1</color>
+    <color name="edittextStrokeGrey">#c1c1c1</color>
+    <color name="lightGrey">#cccccc</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="veryVeryLightGrey">#F9F9F9</color>
+    <color name="whiteTranslucent10Percent">#1Affffff</color>
+    <color name="whiteTranslucent20Percent">#33ffffff</color>
+    <color name="whiteTranslucent50Percent">#80ffffff</color>
+    <color name="whiteTranslucent90Percent">#E6ffffff</color>
+    <color name="whiteTranslucent70Percent">#B3ffffff</color>
+    <color name="translucentBlack">#8C000000</color>
+    <color name="translucentBlack5Percent">#0D000000</color>
+    <color name="blueButton">#288ee8</color>
+    <color name="blueButtonFocussed">#3fc6ff</color>
+    <color name="holoLightBackground">#DDDDDD</color>
+    <color name="holoLightBackground2">#f3f3f3</color>
+    <color name="holoLightBackgroundTranslucent70Percent">#B3f3f3f3</color>
+    <color name="holoLightSecondaryText">#737373</color>
+    <color name="blackTranslucent40Percent">#66000000</color>
+    <color name="blackTranslucent50Percent">#80000000</color>
+    <color name="blackTranslucent10Percent">#1A000000</color>
+    <color name="intro1">#576c93</color>
+    <color name="intro2">#629ed9</color>
+    <color name="intro3">#7870CC</color>
+    <color name="intro4">#5ab8ac</color>
+    <color name="intro5">#5dab56</color>
+    <color name="intro6">#588ec3</color>
+
+    <!--Discover color scheme-->
+    <color name="indigo500">#3F5CA9</color>
+    <color name="indigo500Translucent">#CC3F5CA9</color>
+    <color name="indigo700">#324987</color>
+    <color name="indigo700Translucent">#CC324987</color>
+    <color name="lightBlue500">#ff33b5e5</color>
+    <color name="textPrimary">#DD000000</color>
+    <color name="textSecondary">#89000000</color>
+    <color name="divColor">#1F000000</color>
+    <color name="swipeToRefreshColor1">#E51E61</color>
+    <color name="swipeToRefreshColor2">#00ACF9</color>
+    <color name="swipeToRefreshColor3">#2F3E9B</color>
+    <color name="swipeToRefreshColor4">#7682C5</color>
+
+    <!--GooglePlus-->
+    <color name="googlePlusRed">#d34836</color>
+    <color name="googlePlusRedSelected">#a8392b</color>
+
+    <!--Facebook-->
+    <color name="facebookBlue">#3B5998</color>
+    <color name="facebookBlueSelected">#2F4779</color>
+
+    <!--Facebook Colorscheme-->
+    <color name="fb_greyCardLayoutBackground">#DADBDB</color>
+    <color name="fb_secondaryTextColor">#7E8185</color>
+    <color name="fb_secondayTextColor2">#737780</color>
+    <color name="fb_secondayTextColorLight">#B1B4B7</color>
+    <color name="fb_editTextUnfocussed">#E3E4E6</color>
+    <color name="fb_editTextUnFocussed2">#E5E5E5</color>
+    <color name="fb_dividerColor">#E5E5E5</color>
+    <color name="fb_cardTitleBackground">#F6F7F8</color>
+    <color name="fb_cardTitleText">#6A7180</color>
+
+    <!--Facebook color scheme-->
+    <color name="cardButtonTextColor">#5E5E5E</color>
+
+    <!--Pinterest color scheme-->
+    <color name="actionBarBackground">#dfdfdf</color>
+    <color name="actionBarTextColor">#b7b7b7</color>
+    <color name="actionBarTextColorSelected">#3F5CA9</color>
+
+    <!--SlidingTabStrip stuff-->
+    <color name="sts_divider_color">#90cccccc</color>
+    <color name="sts_indicator_color">@color/indigo500</color>
+    <color name="sts_background_tab_pressed">#6633B5E5</color>
+    <color name="sts_tab_text_color">#808080</color>
+    <color name="sts_tab_text_color_selected">#000000</color>
+
+</resources>

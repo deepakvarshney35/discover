@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.enormous.pkpizzas.consumer.common.NotifyingScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:paddingBottom="15dp"
+    android:background="@color/holoLightBackground" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/holoLightBackground"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+
+                <ImageView
+                    android:id="@+id/productImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder_image" />
+
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/fb_dividerColor" >
+            </View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:paddingRight="10dp"
+                    android:clickable="false"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/productNameTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Giant Tic Tac Toe"
+                        android:textStyle="bold"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/productBrandTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹50 • Zara, Ambience Mall"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/product_cost_textview_background"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/productCostTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:text="₹50"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/fb_dividerColor" >
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/veryVeryLightGrey"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:divider="?android:attr/dividerVertical"
+                android:showDividers="middle"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/bookmarkLinearLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:padding="5dp" >
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_action_bookmark"
+                        android:id="@+id/bookmarkImageView" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="#5E5E5E"
+                        android:text="Bookmark"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/addToCartLinearLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_action_cart" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3dp"
+                        android:gravity="center"
+                        android:text="Add to Cart"
+                        android:textStyle="bold"
+                        android:textColor="@color/cardButtonTextColor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:background="@drawable/card_background"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:padding="10dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:background="@color/fb_cardTitleBackground"
+                android:text="DESCRIPTION"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/fb_cardTitleText"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/fb_dividerColor" />
+
+            <TextView
+                android:id="@+id/productDescriptionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="13dp"
+                android:paddingBottom="13dp"
+                android:text="Add a few words about yourself"
+                android:textColor="@color/textPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:background="@drawable/card_background"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:padding="10dp"
+                android:text="PHOTOS"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:background="@color/fb_cardTitleBackground"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/fb_cardTitleText"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/fb_dividerColor" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ProgressBar
+                    android:id="@+id/photoProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="15dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/nothingFoundTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:textSize="14sp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:visibility="gone"
+                    android:textColor="@color/textPrimary"
+                    android:text="There doesn't seem to be anything here..."/>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+                    <LinearLayout
+                        android:id="@+id/photosContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"/>
+                </HorizontalScrollView>
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.enormous.pkpizzas.consumer.common.NotifyingScrollView>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+
+        <TextView
+            android:id="@+id/offerNameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="Offer"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimary"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/fb_dividerColor" />
+
+        <TextView
+            android:id="@+id/offerDescriptionText"
+            android:layout_width="match_parent"
+            android:layout_margin="15dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:singleLine="false"
+            android:padding="10dp"
+            android:background="@drawable/edittext_selector"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/fb_dividerColor" >
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="?android:attr/dividerVertical"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+<!-- 
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:textColor="@color/textPrimary"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="Cancel" /> -->
+
+            <Button
+                android:id="@+id/shareOnFbButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/textPrimary"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="Share on Facebook" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/progressLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/blackTranslucent50Percent">
+
+        <ProgressBar
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Saving changes..."/>
+
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">pk Pizzas</string>
+    <string name="facebook_app_id_old">344924792339097</string>
+    <string name="facebook_app_id">344924792339097</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_option_spinner">Select option:</string>
+    <string name="title_quantity_spinner">Select quantity:</string>
+    <string name="introText1">Connect and discover.</string>
+    <string name="introText2">Everything is just one touch away</string>
+    <string name="introText3">See the menu of a restaurant or a cafe before even entering it. You don\'t have to scan any QR Code or turn on the GPS!</string>
+    <string name="introText4">See the offers, coupons, catalogues of your favourite brands by just going near their shops. You only enter the shop if you like the offers, catalogue etc. ;)</string>
+    <string name="introText5">We are all about Pizzas</string>
+</resources>

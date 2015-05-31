@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <ImageView
+        android:id="@+id/categoryThumbnailImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/apparels" />
+
+    <TextView
+        android:id="@+id/categoryNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:textSize="14sp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="normal"
+        android:textColor="@color/textPrimary"
+        android:text="TextView"
+        android:layout_toEndOf="@+id/categoryThumbnailImageView"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/categoryCountTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="1"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:visibility="visible"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:id="@+id/categoryCountTextView"
+        android:background="@drawable/category_counter_background"
+        android:textColor="@color/indigo700"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

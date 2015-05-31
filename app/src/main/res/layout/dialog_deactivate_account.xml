@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="Deactivate account"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimary"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/fb_dividerColor" />
+
+
+        <TextView
+            android:id="@+id/productCostTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textSize="14sp"
+            android:textColor="@color/textPrimary"
+            android:text="Are you sure you want to deactivate your account? (There is no going back once you select 'Deactivate')" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/fb_dividerColor" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="?android:attr/dividerVertical"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:weightSum="2" >
+
+            <Button
+                android:id="@+id/noButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:textColor="@color/textPrimary"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="Cancel" />
+
+            <Button
+                android:id="@+id/yesButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/textPrimary"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="Deactivate" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/progressLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/blackTranslucent50Percent">
+
+        <ProgressBar
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Deacitivating account..."/>
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

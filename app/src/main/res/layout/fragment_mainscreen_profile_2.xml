@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/holoLightBackground"
+    android:orientation="vertical">
+
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ab_drop_shadow_height"
+        android:background="@drawable/ab_drop_shadow" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#3F5CA9">
+
+        <FrameLayout
+            android:id="@+id/userPictureImageViewContainer"
+            android:layout_width="@dimen/profilepic_thumbnail_width"
+            android:layout_height="@dimen/profilepic_thumbnail_height"
+            android:layout_margin="8dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:foreground="@drawable/gridview_selector">
+
+            <ImageView
+                android:id="@+id/userPictureImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/apparels" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/userPictureImageViewContainer"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fullNameUserText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-regular"
+                android:paddingBottom="3dp"
+                android:text="Sanat"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+            <!--<TextView
+                android:id="@+id/emailUserText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dp"
+                android:fontFamily="sans-serif-regular"
+                android:textStyle="normal"
+                android:text="sanatdutta316@gmail.com"
+                android:textColor="@color/white"
+                android:textSize="16sp" />-->
+            <!--<TextView
+                android:id="@+id/phoneUserText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-regular"
+                android:text="7896568962"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="normal" />-->
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/profileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_settings_white_24dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/graphPage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/card_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/productCostTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/fb_cardTitleBackground"
+                    android:gravity="left"
+                    android:padding="15dp"
+                    android:text="CHATS:"
+                    android:textColor="@color/fb_cardTitleText"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/fb_dividerColor" />
+
+                <TextView
+                    android:id="@+id/noChatsPlaceholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="You can message merchants for free using this App instead of wasting your time to call them ;)"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <ListView
+                    android:id="@android:id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="@drawable/card_background"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:paddingBottom="5dp"
+                    android:scrollbars="none"
+                    android:visibility="visible"
+                    tools:listitem="@layout/listview_customers"></ListView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ab_drop_shadow_height"
+            android:background="@drawable/ab_drop_shadow"/>-->
+
+    </FrameLayout>
+        <ProgressBar
+            android:id="@+id/customerRefreshBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

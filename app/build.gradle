@@ -1,0 +1,42 @@
+apply plugin: 'android'
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '22.0.1'
+
+    defaultConfig {
+        applicationId "com.enormous.pkpizzas.consumer"
+        minSdkVersion 18
+        targetSdkVersion 22
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_7
+            targetCompatibility JavaVersion.VERSION_1_7
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v13:22.1.1'
+    compile 'com.android.support:appcompat-v7:22.1.1'
+    compile 'com.google.android.gms:play-services:6.1+'
+    compile files('libs/Parse-1.8.0.jar')
+    compile files('libs/firebase-client-jvm-1.0.8.jar')
+    compile files('libs/ParseCrashReporting-1.8.0.jar')
+    compile 'org.altbeacon:android-beacon-library:2+@aar'
+
+    compile project(':facebook')
+}

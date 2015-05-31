@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill_horizontal"
+        android:paddingLeft="2dp"
+        android:background="@color/indigo500"
+        android:paddingRight="2dp" >
+
+        <ImageButton
+            android:id="@+id/searchButton"
+            android:layout_width="50dp"
+            android:scaleType="centerInside"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_alignBottom="@+id/homeButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/sts_tab_background_selector"
+            android:src="@drawable/ic_action_archives_2" />
+
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/profileButton"
+            android:layout_toRightOf="@+id/searchButton"
+            android:background="@drawable/sts_tab_background_selector"
+            android:text="discover"
+            android:textColor="#60cccccc"
+            android:textSize="28sp" />
+
+        <ImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="50dp"
+            android:scaleType="centerInside"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_alignBottom="@+id/homeButton"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/sts_tab_background_selector"
+            android:src="@drawable/ic_chat_2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/white"
+            android:layout_alignBottom="@+id/searchButton"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+</LinearLayout>

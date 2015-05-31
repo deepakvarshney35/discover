@@ -1,0 +1,53 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:foreground="@drawable/gridview_selector" >
+
+    <ImageView
+        android:id="@+id/categoryImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:src="@drawable/apparels" />
+
+    <ImageView
+        android:id="@+id/selectedImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/translucentBlack"
+        android:padding="35dp"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_action_tick"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="4"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/categoryNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="@color/whiteTranslucent90Percent"
+            android:gravity="top|left"
+            android:layout_gravity="top"
+            android:textStyle="bold"
+            android:background="@drawable/category_background_gradient"
+            android:textSize="14sp"
+            android:text="Apparels"/>
+
+        </LinearLayout>
+
+
+</FrameLayout>
+
+
+
+
